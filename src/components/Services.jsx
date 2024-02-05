@@ -7,28 +7,28 @@ const Services = () => {
       title: 'Domestic installation',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'src/assets/icons/home.png',
+      image: 'public/icons/home.png',
     },
     {
       id: 2,
       title: 'Businesses',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'src/assets/icons/business.png',
+      image: 'public/icons/business.png',
     },
     {
       id: 3,
       title: 'Schools',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'src/assets/icons/school.png',
+      image: 'public/icons/school.png',
     },
     {
       id: 4,
       title: 'Hospitals',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'src/assets/icons/hospital.png',
+      image: 'public/icons/hospital.png',
     },
   ];
 
@@ -45,26 +45,18 @@ const Services = () => {
         {/* company logo's */}
         <div className="flex flex-wrap justify-between my-12">
           <img
-            src="src/assets/carnegie-mellon-university-logo.png"
+            src="public/carnegie-mellon-university-logo.png"
             alt="carnegie-mellon-university-logo"
             className="w-[60px]"
           />
+          <img src="public/MTN-Logo.png" alt="MTN-Logo" className="w-[60px]" />
           <img
-            src="src/assets/MTN-Logo.png"
-            alt="MTN-Logo"
-            className="w-[60px]"
-          />
-          <img
-            src="src/assets/Rwanda-Bralirwa-logo.png"
+            src="public/Rwanda-Bralirwa-logo.png"
             alt="Rwanda-Bralirwa-logo"
             className="w-[60px]"
           />
-          <img
-            src="src/assets/skol-logo.png"
-            alt="kol-logo"
-            className="w-[60px]"
-          />
-          <img src="src/assets/urlogo.png" alt="urlogo" className="w-[60px]" />
+          <img src="public/skol-logo.png" alt="kol-logo" className="w-[60px]" />
+          <img src="public/urlogo.png" alt="urlogo" className="w-[60px]" />
         </div>
       </div>
 
