@@ -9,6 +9,7 @@ export default {
         brandPrimary: '#1F4E79',
         brandSecondary: '#9933FF',
         neutralGrey: '#717171',
+        gray900: '#18191F',
       },
     },
   },
