@@ -67,7 +67,7 @@ const Navbar = () => {
               Login
             </a>
             <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">
-              Sing up
+              Sign up
             </button>
           </div>
 
@@ -85,6 +85,26 @@ const Navbar = () => {
               )}
             </button>
           </div>
+        </div>
+
+        {/* nav for mobile devices */}
+        <div
+          className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${
+            isMenuOpem ? 'block fixed top-0 right-0 left-0' : 'hidden'
+          }`}
+        >
+          {navItems.map(({ link, path }) => (
+            <Link
+              key={path}
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              className="block text-base text-white hover:text-neutralGrey cursor-pointer first:font-medium"
+            >
+              {link}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>
