@@ -3,6 +3,11 @@ import homeImage from '../assets/icons/home.png';
 import businessImage from '../assets/icons/business.png';
 import schoolImage from '../assets/icons/school.png';
 import hospitalImage from '../assets/icons/hospital.png';
+import mtnLogo from '../assets/MTN-Logo.png';
+import skolLogo from '../assets/skol-logo.png';
+import cmuLogo from '../assets/carnegie-mellon-university-logo.png';
+import bralirwaLogo from '../assets/Rwanda-Bralirwa-logo.png';
+import urLogo from '../assets/urlogo.png';
 
 const Services = () => {
   const services = [
@@ -49,18 +54,18 @@ const Services = () => {
         {/* company logo's */}
         <div className="flex flex-wrap justify-between my-12">
           <img
-            src="public/carnegie-mellon-university-logo.png"
+            src={cmuLogo}
             alt="carnegie-mellon-university-logo"
             className="w-[60px]"
           />
           <img src="public/MTN-Logo.png" alt="MTN-Logo" className="w-[60px]" />
           <img
-            src="public/Rwanda-Bralirwa-logo.png"
+            src={bralirwaLogo}
             alt="Rwanda-Bralirwa-logo"
             className="w-[60px]"
           />
-          <img src="public/skol-logo.png" alt="kol-logo" className="w-[60px]" />
-          <img src="public/urlogo.png" alt="urlogo" className="w-[60px]" />
+          <img src={skolLogo} alt="kol-logo" className="w-[60px]" />
+          <img src={urLogo} alt="urlogo" className="w-[60px]" />
         </div>
       </div>
 
