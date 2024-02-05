@@ -11,7 +11,11 @@ const Home = () => {
         <Carousel className="w-full mx-auto">
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
-              <img src={banner1} alt="banner 1" />
+              <img
+                src={banner1}
+                alt="banner 1"
+                // className="w-24 h-24 object-contain"
+              />
             </div>
 
             {/* Hero text */}
@@ -31,7 +35,11 @@ const Home = () => {
           </div>
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
-              <img src={banner1} alt="banner 1" />
+              <img
+                src={banner2}
+                alt="banner 2"
+                // className="w-24 h-24 object-contain"
+              />
             </div>
 
             {/* Hero text */}
@@ -51,7 +59,11 @@ const Home = () => {
           </div>
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
-              <img src={banner1} alt="banner 1" />
+              <img
+                src={banner3}
+                alt="banner 3"
+                // className="w-24 h-24 object-contain"
+              />
             </div>
 
             {/* Hero text */}
