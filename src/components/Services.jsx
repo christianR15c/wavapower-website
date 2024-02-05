@@ -1,4 +1,8 @@
 import React from 'react';
+import homeImage from '../assets/icons/home.png';
+import businessImage from '../assets/icons/business.png';
+import schoolImage from '../assets/icons/school.png';
+import hospitalImage from '../assets/icons/hospital.png';
 
 const Services = () => {
   const services = [
@@ -7,28 +11,28 @@ const Services = () => {
       title: 'Domestic installation',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'public/icons/home.png',
+      image: homeImage,
     },
     {
       id: 2,
       title: 'Businesses',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'public/icons/business.png',
+      image: businessImage,
     },
     {
       id: 3,
       title: 'Schools',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'public/icons/school.png',
+      image: schoolImage,
     },
     {
       id: 4,
       title: 'Hospitals',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-      image: 'public/icons/hospital.png',
+      image: hospitalImage,
     },
   ];
 
