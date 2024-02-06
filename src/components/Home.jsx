@@ -11,16 +11,12 @@ const Home = () => {
         <Carousel className="w-full mx-auto">
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>
-              <img
-                src={banner1}
-                alt="banner 1"
-                // className="w-24 h-24 object-contain"
-              />
+              <img src={banner1} alt="banner 1" className="max-h-[100vh]" />
             </div>
 
             {/* Hero text */}
             <div>
-              <h1 className="text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
+              <h1 className="md:text-5xl text-2xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
                 We create electricity{' '}
                 <span className="text-brandSecondary leading-snug">
                   from the cloud
@@ -44,7 +40,7 @@ const Home = () => {
 
             {/* Hero text */}
             <div>
-              <h1 className="text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
+              <h1 className="md:text-5xl text-2xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
                 Lessons and insights{' '}
                 <span className="text-brandSecondary leading-snug">
                   from 3 years
@@ -68,7 +64,7 @@ const Home = () => {
 
             {/* Hero text */}
             <div>
-              <h1 className="text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
+              <h1 className="md:md:text-5xl text-2xl text-2xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
                 Be the first to get this{' '}
                 <span className="text-brandSecondary leading-snug">
                   amaziing electricity

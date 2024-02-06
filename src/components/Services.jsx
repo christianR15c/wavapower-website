@@ -58,7 +58,7 @@ const Services = () => {
             alt="carnegie-mellon-university-logo"
             className="w-[60px]"
           />
-          <img src="public/MTN-Logo.png" alt="MTN-Logo" className="w-[60px]" />
+          <img src={mtnLogo} alt="MTN-Logo" className="w-[60px]" />
           <img
             src={bralirwaLogo}
             alt="Rwanda-Bralirwa-logo"
