@@ -1,6 +1,7 @@
 import './App.css';
 import About from './components/About';
 import BookDemo from './components/BookDemo';
+import Footer from './components/MyFooter';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Product from './components/Product';
@@ -17,6 +18,7 @@ function App() {
       <Product />
       <Works />
       <BookDemo />
+      <Footer />
     </>
   );
 }
