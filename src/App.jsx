@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/About';
+import BookDemo from './components/BookDemo';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Product from './components/Product';
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Product />
       <Works />
+      <BookDemo />
     </>
   );
 }
