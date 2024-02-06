@@ -101,6 +101,7 @@ const Navbar = () => {
               smooth={true}
               offset={-100}
               className="block text-base text-white hover:text-neutralGrey cursor-pointer first:font-medium"
+              onClick={() => setIsMenuOpem(!isMenuOpem)}
             >
               {link}
             </Link>
