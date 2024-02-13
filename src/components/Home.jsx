@@ -10,10 +10,6 @@ const Home = () => {
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
         <Carousel className="w-full mx-auto">
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
-            <div>
-              <img src={banner1} alt="banner 1" className="max-h-[100vh]" />
-            </div>
-
             {/* Hero text */}
             <div>
               <h1 className="md:text-5xl text-2xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug">
@@ -27,6 +23,9 @@ const Home = () => {
                 anytime
               </p>
               <button className="btn-primary">Get Now</button>
+            </div>
+            <div>
+              <img src={banner1} alt="banner 1" className="max-h-[100vh]" />
             </div>
           </div>
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">

@@ -22,9 +22,8 @@ const Navbar = () => {
   const navItems = [
     { link: 'Home', path: 'home' },
     { link: 'Services', path: 'services' },
+    { link: 'Impact', path: 'impact' },
     { link: 'About', path: 'about' },
-    { link: 'Product', path: 'product' },
-    { link: 'Testimonial', path: 'testimonial' },
   ];
 
   return (
@@ -60,15 +59,7 @@ const Navbar = () => {
 
           {/* button for large devices */}
           <div className="space-x-12 hidden lg:flex items-center">
-            <a
-              href="/"
-              className="hidden lg:flex items-center text-brandPrimary hover:text-gray900"
-            >
-              Login
-            </a>
-            <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">
-              Sign up
-            </button>
+            <button className="btn-primary">Get involved</button>
           </div>
 
           {/* button for only mobile devices */}
