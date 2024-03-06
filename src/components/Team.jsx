@@ -8,34 +8,39 @@ const Team = () => {
       name: 'Deric',
       title: 'CEO & Fouder',
       image: banner2,
+      link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 2,
       name: 'Shammah',
       title: 'title',
       image: banner2,
+      link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 3,
       name: 'Patrick',
       title: 'title',
       image: banner2,
+      link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 4,
       name: 'Dieudonne',
       title: 'title',
       image: banner2,
+      link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 5,
       name: 'Eric',
       title: 'title',
       image: banner2,
+      link: 'https://www.linkedin.com/feed/',
     },
   ];
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="services">
+    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="team">
       <div className="text-center my-8">
         <h2 className="text-4xl text-neutralGrey font-semibold mb-2">
           Meet Team
@@ -65,7 +70,12 @@ const Team = () => {
                 </h5>
                 <span className="text-gray-500">{teamMember.title}</span>
               </div>
-              <a href="#" className="block w-max mx-auto text-blue-500 text-sm">
+              <a
+                href={teamMember.link}
+                target="_blank"
+                className="block w-max mx-auto text-blue-500 text-sm"
+                rel="noreferrer"
+              >
                 view bio
               </a>
             </div>

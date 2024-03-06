@@ -8,6 +8,7 @@ import Product from './components/Product';
 import Services from './components/Services';
 import Works from './components/Works';
 import Team from './components/Team';
+import Mission from './components/Mission';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Product />
       <Works />
+      <Mission />
       <Team />
       <BookDemo />
       <Footer />
