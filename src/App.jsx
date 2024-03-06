@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Product from './components/Product';
 import Services from './components/Services';
 import Works from './components/Works';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Product />
       <Works />
+      <Team />
       <BookDemo />
       <Footer />
     </>
