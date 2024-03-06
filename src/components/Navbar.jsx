@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/wavapower-logo.png';
 import { Link } from 'react-scroll';
 import { FaAlignJustify, FaX } from 'react-icons/fa6';
 

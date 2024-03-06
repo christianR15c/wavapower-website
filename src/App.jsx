@@ -9,16 +9,18 @@ import Services from './components/Services';
 import Works from './components/Works';
 import Team from './components/Team';
 import Mission from './components/Mission';
+import TakeACtion from './components/TakeACtion';
 
 function App() {
   return (
     <>
       <Navbar />
       <Home />
-      <Services />
-      <About />
-      <Product />
-      <Works />
+      {/* <Services /> */}
+      {/* <About /> */}
+      {/* <Product /> */}
+      {/* <Works /> */}
+      <TakeACtion />
       <Mission />
       <Team />
       <BookDemo />
