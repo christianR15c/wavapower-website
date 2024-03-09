@@ -1,43 +1,39 @@
-import React from 'react';
-import banner2 from '../assets/wavapower2.jpg';
+import React, { useEffect } from 'react';
+import testimony from '../assets/testimony.jpg';
+import testimony1 from '../assets/testimony1.jpg';
+import testimony2 from '../assets/testimony2.jpg';
+import testimony3 from '../assets/testimony3.jpg';
+import testimony4 from '../assets/testimony4.jpg';
+import testimony5 from '../assets/testimony5.jpg';
+import testimony6 from '../assets/testimony6.jpg';
+import testimony7 from '../assets/testimony7.jpg';
+import testimony8 from '../assets/testimony8.jpg';
+import testimony9 from '../assets/testimony9.jpg';
+import testimony10 from '../assets/testimony10.jpg';
 import { useState } from 'react';
 import { Modal } from 'flowbite-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Testimonial = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  const CHARACTER_LIMIT = 100;
+  const testimonyPics = [
+    { image: testimony1, id: 1 },
+    { image: testimony2, id: 2 },
+    { image: testimony3, id: 3 },
+    { image: testimony4, id: 4 },
+    { image: testimony5, id: 5 },
+    { image: testimony6, id: 6 },
+    { image: testimony7, id: 7 },
+    { image: testimony8, id: 8 },
+    { image: testimony9, id: 9 },
+    { image: testimony10, id: 10 },
+  ];
 
-  const [numberEmptyError, setNumberEmptyError] = useState(false);
-  const [messageEmptyError, setMessageEmptyError] = useState(false);
-
-  const [formData, setFormData] = useState({
-    mobileNumber: '',
-    message: '',
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
   });
-
-  const { mobileNumber, message } = formData;
-
-  const onChange = (e) => {
-    e.preventDefault();
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (mobileNumber.length < 1) {
-      setNumberEmptyError(true);
-      setTimeout(() => setNumberEmptyError(false), 3000);
-    } else if (message.length < 1) {
-      setMessageEmptyError(true);
-      setTimeout(() => setMessageEmptyError(false), 3000);
-    } else {
-      // TODO: Enter code here
-    }
-  };
 
   return (
     <div
@@ -55,9 +51,12 @@ const Testimonial = () => {
       <section className="mb-32 text-center md:text-left">
         <div className="block rounded-xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex flex-wrap items-center">
-            <div className="block w-full shrink-0 grow-0 basis-auto md:flex md:w-6/12 lg:w-4/12">
+            <div
+              data-aos="fade-right"
+              className="block w-full shrink-0 grow-0 basis-auto md:flex md:w-6/12 lg:w-4/12"
+            >
               <img
-                src={banner2}
+                src={testimony}
                 alt="Trendy Pants and Shoes"
                 className="w-full rounded-lg"
               />
@@ -102,34 +101,15 @@ const Testimonial = () => {
                   <Modal.Header>Gallery</Modal.Header>
                   <Modal.Body>
                     <div className="grid md:grid-cols-2 grid-cols gap-2">
-                      <div>
-                        <img
-                          className="h-auto max-w-full rounded-lg"
-                          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="h-auto max-w-full rounded-lg"
-                          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="h-auto max-w-full rounded-lg"
-                          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="h-auto max-w-full rounded-lg"
-                          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-                          alt=""
-                        />
-                      </div>
+                      {testimonyPics.map((testimony) => (
+                        <div key={testimony.id}>
+                          <img
+                            className="h-auto max-w-full rounded-lg"
+                            src={testimony.image}
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                   </Modal.Body>
                 </Modal>
