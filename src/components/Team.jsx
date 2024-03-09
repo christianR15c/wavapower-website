@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import dericImage from '../assets/team/dericFoto.png';
 import assoumanImage from '../assets/team/AssoumanFoto.png';
 import shammahImage from '../assets/team/shammah.png';
@@ -7,8 +7,14 @@ import dieudonneImage from '../assets/team/dieudonneFoto.png';
 import ericImage from '../assets/team/ericFoto.png';
 import christianImage from '../assets/team/christianFoto.png';
 import { TEAnimation } from 'tw-elements-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Team = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  });
+
   const team = [
     {
       id: 1,
@@ -26,7 +32,7 @@ const Team = () => {
     },
     {
       id: 3,
-      name: 'Patrick',
+      name: 'Patrick Musabyimana',
       title: 'Co-Founder & Product Designer',
       image: patrickImage,
       link: 'https://www.linkedin.com/feed/',
@@ -67,7 +73,7 @@ const Team = () => {
           Meet Team
         </h2>
         <p className="text-neutralGrey">
-          We are a team of 10 people from different backgrounds
+          We are a team from different backgrounds
         </p>
         <div className="w-screen pt-40 flex flex-wrap justify-center gap-28 md:gap-12">
           {team.map((teamMember) => (
@@ -78,7 +84,10 @@ const Team = () => {
               repeatOnScroll
               className="[&>svg]:w-11 lg:w-1/4 md:w-1/3 w-full flex justify-center items-center"
             >
-              <div className="animate-slidein border-t-4 space-y-4 group text-center justify-center mx-auto md:my-6">
+              <div
+                data-aos="fade-up"
+                className="border-t-4 space-y-4 group text-center justify-center mx-auto md:my-6"
+              >
                 <div className="w-32 h-32 -mt-16 mx-auto rounded-[2rem] rotate-45 overflow-hidden">
                   <img
                     src={teamMember.image}
