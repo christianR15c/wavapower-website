@@ -1,10 +1,11 @@
 import React from 'react';
-import dericImage from '../assets/team/deric.png';
+import dericImage from '../assets/team/dericFoto.png';
+import assoumanImage from '../assets/team/AssoumanFoto.png';
 import shammahImage from '../assets/team/shammah.png';
-import patrickImage from '../assets/team/patrick.png';
-import dieudonneImage from '../assets/team/dieudonne.png';
-import ericImage from '../assets/team/eric.png';
-import christianImage from '../assets/team/christian.jpeg';
+import patrickImage from '../assets/team/patrickFoto.png';
+import dieudonneImage from '../assets/team/dieudonneFoto.png';
+import ericImage from '../assets/team/ericFoto.png';
+import christianImage from '../assets/team/christianFoto.png';
 import { TEAnimation } from 'tw-elements-react';
 
 const Team = () => {
@@ -32,20 +33,27 @@ const Team = () => {
     },
     {
       id: 4,
+      name: 'Assouman Nkundabandi',
+      title: 'Technical Assistant',
+      image: assoumanImage,
+      link: 'https://www.linkedin.com/feed/',
+    },
+    {
+      id: 5,
       name: 'Dieudonne Nshimiyimana',
       title: 'Accounting & Legal',
       image: dieudonneImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Eric Ndekezi',
-      title: 'title',
+      title: 'Advertising & Marketing',
       image: ericImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 6,
+      id: 7,
       name: 'Christian Habineza',
       title: 'Software Engineer',
       image: christianImage,
@@ -61,16 +69,16 @@ const Team = () => {
         <p className="text-neutralGrey">
           We are a team of 10 people from different backgrounds
         </p>
-        <div className="pt-40 grid md:grid-cols-3 gap-28 md:gap-12">
+        <div className="w-screen pt-40 flex flex-wrap justify-center gap-28 md:gap-12">
           {team.map((teamMember) => (
             <TEAnimation
               key={teamMember.id}
               animation="[slide-right_1s_ease-in-out]"
               start="onLoad"
               repeatOnScroll
-              className="[&>svg]:w-11"
+              className="[&>svg]:w-11 lg:w-1/4 md:w-1/3 w-full flex justify-center items-center"
             >
-              <div className="animate-slidein border-t-4 space-y-4 group text-center md:my-6">
+              <div className="animate-slidein border-t-4 space-y-4 group text-center justify-center mx-auto md:my-6">
                 <div className="w-32 h-32 -mt-16 mx-auto rounded-[2rem] rotate-45 overflow-hidden">
                   <img
                     src={teamMember.image}
@@ -78,7 +86,7 @@ const Team = () => {
                     loading="lazy"
                     width="640"
                     height="805"
-                    className="w-full h-full object-cover -rotate-45 scale-125 mx-auto transition duration-300 group-hover:scale-[1.4]"
+                    className="w-full h-full object-contain -rotate-45 scale-125 mx-auto transition duration-300 group-hover:scale-[1.4]"
                   />
                 </div>
                 <div className="mt-4 text-center">
