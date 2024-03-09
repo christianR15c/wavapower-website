@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ModalComp from './ModalComp';
 
 const BookDemo = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16">
       <div className="flex items-center justify-center lg:w-2/5 mx-auto">
@@ -9,7 +12,7 @@ const BookDemo = () => {
             See what we can offer
           </h2>
           <div className="flex items-center justify-center gap8">
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={() => setOpenModal(true)}>
               Book Demo{' '}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +28,7 @@ const BookDemo = () => {
                 />
               </svg>
             </button>
+            <ModalComp openModal={openModal} setOpenModal={setOpenModal} />
           </div>
         </div>
       </div>

@@ -10,16 +10,19 @@ import Works from './components/Works';
 import Team from './components/Team';
 import Mission from './components/Mission';
 import TakeACtion from './components/TakeACtion';
+import Testimonial from './components/Testimonial';
 
 function App() {
   return (
     <>
+      {/* <Navbar1 /> */}
       <Navbar />
-      <Home />
+      {/* <Home /> */}
       {/* <Services /> */}
       {/* <About /> */}
       {/* <Product /> */}
-      {/* <Works /> */}
+      <Works />
+      <Testimonial />
       <TakeACtion />
       <Mission />
       <Team />
