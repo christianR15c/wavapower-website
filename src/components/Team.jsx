@@ -11,49 +11,49 @@ const Team = () => {
   const team = [
     {
       id: 1,
-      name: 'Deric',
-      title: 'CEO & Fouder',
+      name: 'Deric Kwizera',
+      title: 'Co-Fouder & CEO',
       image: dericImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 2,
-      name: 'Shammah',
-      title: 'title',
+      name: 'Shammah LaGrâce',
+      title: 'Co-Founder & Business, Strategy developer',
       image: shammahImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 3,
       name: 'Patrick',
-      title: 'title',
+      title: 'Co-Founder & Product Designer',
       image: patrickImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 4,
-      name: 'Dieudonne',
-      title: 'title',
+      name: 'Dieudonne Nshimiyimana',
+      title: 'Accounting & Legal',
       image: dieudonneImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 5,
-      name: 'Eric',
+      name: 'Eric Ndekezi',
       title: 'title',
       image: ericImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
       id: 6,
-      name: 'Christian',
-      title: 'title',
+      name: 'Christian Habineza',
+      title: 'Software Engineer',
       image: christianImage,
       link: 'https://www.linkedin.com/feed/',
     },
   ];
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="team">
+    <div className="md:px-14 px-4 max-w-screen-2xl mx-auto">
       <div className="text-center my-8">
         <h2 className="text-4xl text-neutralGrey font-semibold mb-2">
           Meet Team

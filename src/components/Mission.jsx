@@ -3,19 +3,22 @@ import banner2 from '../assets/wavapower2.jpg';
 
 const Mission = () => {
   return (
-    <div className="md:px-14 px-4 py-16  mx-auto" id="mission">
+    <div className="md:px-14 px-4 pt-16 md:pb-0 pb-6  mx-auto" id="about">
       <div className="flex h-72 justify-center items-center flex-col">
         <div
           style={{ backgroundImage: `url(${banner2})` }}
           className={`w-full h-screen bg-cover bg-center`}
         >
-          <div className="w-full h-full flex flex-col  justify-center items-center backdrop-brightness-75">
-            <h2 className="md:text-4xl text-xl text-white font-semibold mb-4">
-              Mission Statement
+          <div className="animate-slidein w-full h-full flex flex-col  justify-center items-center backdrop-brightness-75">
+            <h2 className="animate-slidein md:text-4xl text-2xl text-white font-semibold mb-4">
+              Mission
             </h2>
-            <p className="md:w-3/4 text-sm text-white mb-8 mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+            <p className="animate-slidein text-center md:w-3/4 md:text-lg text-xl text-white mb-8 mx-auto px-8">
+              Advancing technology and the use of digital services in Africa by
+              bridging the gap of electrical access using electromagnetic waves
+              to supply electrical energy to households, institutions and
+              businesses. Our approach is renewable, affordable, wireless and
+              not only conserves the environment, it enhances it.
             </p>
           </div>
         </div>

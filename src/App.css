@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&family=Reem+Kufi:wght@400..700&display=swap');
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'reem kufi', sans-serif;
 }
 
 header {
@@ -9,5 +11,5 @@ header {
 }
 
 .btn-primary {
-  @apply px-7 py-2 bg-brandSecondary text-white rounded hover:bg-neutralGrey transition-all duration-300 hover:-translate-y-4;
+  @apply px-7 py-2 bg-brandSecondary text-white outline-none border-none rounded-full text-lg font-semibold cursor-pointer transition duration-200 hover:bg-neutralGrey;
 }
