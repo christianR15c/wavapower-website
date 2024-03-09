@@ -7,7 +7,7 @@ const Mission = () => {
       <div className="flex md:h-72 h-32 justify-center items-center flex-col">
         <div
           style={{ backgroundImage: `url(${banner2})` }}
-          className={`w-full h-screen bg-cover bg-center`}
+          className={`w-full bg-cover bg-center`}
         >
           <div className="animate-slidein w-full h-full flex flex-col  justify-center items-center backdrop-brightness-75">
             <h2 className="animate-slidein md:text-4xl text-2xl text-white font-semibold mb-4">
