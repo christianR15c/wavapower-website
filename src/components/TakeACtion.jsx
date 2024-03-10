@@ -1,15 +1,52 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Stepper,
   Step,
   CardHeader,
   Typography,
 } from '@material-tailwind/react';
-import investPicture from '../assets/invest.jpg';
+import toast, { Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function TakeAction() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const form = useRef();
+  const successNotify = () =>
+    toast.success('Your message was successfully sent!');
+  const notify = () => toast.error('Message not sent, please try again later.');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_r8hfl4h',
+        'template_ihpylw8',
+        form.current,
+        'XmlYJbJCXXfUrcfUU'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          notify();
+          console.log(error.text);
+        }
+      );
+    successNotify();
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  };
 
   return (
     <div
@@ -73,57 +110,6 @@ export function TakeAction() {
         </CardHeader>
       </div>
 
-      {/* <div className="grid gap-4 mb-4 sm:grid-cols-3">
-          <div>
-            <label
-              name="name"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Enter your name"
-              required=""
-            />
-          </div>
-          <div>
-            <label
-              name="email"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="name@company.com"
-              required=""
-            />
-          </div>
-          <div>
-            <label
-              name="phone number"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Phone number
-            </label>
-            <input
-              type="phone number"
-              name="phone number"
-              id="phone number"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder=""
-              required=""
-            />
-          </div>{' '}
-        </div> */}
-
       <section className="my-12">
         <div className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/284.jpg')]">
           {' '}
@@ -135,13 +121,16 @@ export function TakeAction() {
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="relative mb-6" data-te-input-wrapper-init>
                     <input
                       type="text"
                       className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline outline-1 outline-slate-400 transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="exampleInput90"
                       placeholder="Name"
+                      name="user_name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <label
                       className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -155,13 +144,33 @@ export function TakeAction() {
                       type="email"
                       className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline outline-1 outline-slate-400 transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="exampleInput91"
-                      placeholder="Email address"
+                      placeholder="Email"
+                      name="user_email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <label
                       className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                       htmlFor="exampleInput91"
                     >
-                      Email address
+                      Email
+                    </label>
+                  </div>
+                  <div className="relative mb-6" data-te-input-wrapper-init>
+                    <input
+                      type="phone"
+                      className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline outline-1 outline-slate-400 transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleInput91"
+                      placeholder="Phone"
+                      name="user_phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                    />
+                    <label
+                      className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                      htmlFor="exampleInput91"
+                    >
+                      Phone
                     </label>
                   </div>
                   <div className="relative mb-6" data-te-input-wrapper-init>
@@ -170,6 +179,9 @@ export function TakeAction() {
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Your message"
+                      name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                     <label
                       htmlFor="exampleFormControlTextarea1"
@@ -181,6 +193,7 @@ export function TakeAction() {
 
                   <button className="btn-primary">Send</button>
                 </form>
+                <Toaster />
               </div>
               <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
                 <div className="flex flex-wrap">
