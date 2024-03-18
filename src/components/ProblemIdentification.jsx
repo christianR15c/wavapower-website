@@ -12,8 +12,11 @@ const ProblemIdentification = () => {
   });
 
   return (
-    <div className="px-4 w-full lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-6 mb-4">
-      <div className="flex flex-col justify-center items-center">
+    <div className="px-4 w-full lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-8 mb-4">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col justify-center items-center"
+      >
         <div className="py-2">
           <h2 className="lg:text-6xl md:text-4xl text-2xl bg-gradient-to-r from-brandSecondary to-brandPrimary inline-block text-transparent bg-clip-text">
             Why is Africa still stluggling to access electricity?

@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProblemIdentification from './components/ProblemIdentification';
+import SolutionIdentification from './components/SolutionIdentification';
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,9 @@ function App() {
       </div>
       <div data-aos="fade-up">
         <ProblemIdentification />
+      </div>
+      <div data-aos="fade-up">
+        <SolutionIdentification />
       </div>
       <div data-aos="fade-up">
         <Impact />
