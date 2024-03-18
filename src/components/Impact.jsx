@@ -38,18 +38,16 @@ const Impact = () => {
 
   return (
     <div
-      className="md:px-14 flex flex-col gap-3 px-4 max-w-screen-2xl mx-auto"
+      className="md:px-14 flex flex-col gap-3 px-4 pt-8 max-w-screen-2xl mx-auto text-neutralDGrey bg-neutralSilver"
       id="impact"
     >
       <div className="text-center md:w-1/2 mx-auto">
-        <h2 className="md:text-4xl text-xl text-neutralDGrey font-semibold mb-4">
-          IMPACT
-        </h2>
+        <h2 className="md:text-4xl text-xl font-semibold mb-4">IMPACT</h2>
       </div>
-      <h2 className="md:text-4xl text-xl text-neutralDGrey font-semibold">
+      <h2 className="md:text-4xl text-xl font-semibold text-neutralGrey">
         1 Down,
       </h2>
-      <h2 className="md:text-4xl text-xl text-neutralDGrey font-semibold mb-1">
+      <h2 className="md:text-4xl text-xl font-semibold mb-1 text-neutralGrey">
         597 million to go.
       </h2>
       <section className="mb-32 md:text-left">

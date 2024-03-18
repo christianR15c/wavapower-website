@@ -54,7 +54,7 @@ export function TakeAction() {
 
   return (
     <div
-      className="md:px-14 flex flex-col gap-3 px-4 max-w-screen-2xl mx-auto"
+      className="md:px-14 flex flex-col gap-3 pt-8 px-4 max-w-screen-2xl mx-auto"
       id="action"
     >
       <h2 className="md:text-4xl text-xl text-neutralDGrey font-semibold text-center mb-4">
