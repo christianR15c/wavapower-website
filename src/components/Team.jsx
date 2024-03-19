@@ -40,7 +40,7 @@ const Team = () => {
     },
     {
       id: 4,
-      name: 'Justin MAcharia',
+      name: 'Justin Macharia',
       title: 'Advisor',
       image: justinImage,
       link: 'https://www.linkedin.com/feed/',
