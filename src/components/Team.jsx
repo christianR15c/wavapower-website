@@ -3,6 +3,7 @@ import dericImage from '../assets/team/dericFoto.png';
 import assoumanImage from '../assets/team/AssoumanFoto.png';
 import shammahImage from '../assets/team/shammahFoto.png';
 import patrickImage from '../assets/team/patrickFoto.png';
+import justinImage from '../assets/team/justinFoto.png';
 import dieudonneImage from '../assets/team/dieudonneFoto.png';
 import ericImage from '../assets/team/ericFoto.png';
 import christianImage from '../assets/team/christianFoto.png';
@@ -39,27 +40,34 @@ const Team = () => {
     },
     {
       id: 4,
+      name: 'Justin MAcharia',
+      title: 'Advisor',
+      image: justinImage,
+      link: 'https://www.linkedin.com/feed/',
+    },
+    {
+      id: 5,
       name: 'Assouman Nkundabandi',
       title: 'Technical Assistant',
       image: assoumanImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Dieudonne Nshimiyimana',
       title: 'Accounting & Legal',
       image: dieudonneImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 6,
+      id: 7,
       name: 'Eric Ndekezi',
       title: 'Advertising & Marketing',
       image: ericImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 7,
+      id: 8,
       name: 'Christian Habineza',
       title: 'Software Engineer',
       image: christianImage,
