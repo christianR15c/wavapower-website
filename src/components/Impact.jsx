@@ -68,11 +68,9 @@ const Impact = () => {
             <div className="w-full shrink-0 grow-0 basis-auto md:w-6/12 lg:w-8/12">
               <div className="px-6 py-12 md:px-12">
                 <h2 className="animate-slidein mb-2 text-3xl font-bold text-primary dark:text-primary-400">
-                  Nyirakamana
+                  Gicumbi home installation
                 </h2>
-                <p className="animate-slidein mb-4 font-semibold">
-                  Local citizen
-                </p>
+
                 <p className="animate-slidein mb-4 font-semibold">
                   Location: Gicumbi, Rwanda
                 </p>

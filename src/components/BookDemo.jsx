@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import ModalComp from './ModalComp';
+import React from 'react';
 
 const BookDemo = () => {
-  const [openModal, setOpenModal] = useState(false);
-
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16">
       <div className="flex items-center justify-center lg:w-2/5 mx-auto">
@@ -12,23 +9,28 @@ const BookDemo = () => {
             See what we can offer
           </h2>
           <div className="flex items-center justify-center gap8">
-            <button className="btn-primary" onClick={() => setOpenModal(true)}>
-              Book Demo{' '}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="17"
-                height="11"
-                viewBox="0 0 17 11"
-                fill="none"
-                className="inline-block ml-2"
-              >
-                <path
-                  d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 1.39905M15 5.39905L1 5.39905"
-                  stroke="#FFFFFF"
-                />
-              </svg>
-            </button>
-            <ModalComp openModal={openModal} setOpenModal={setOpenModal} />
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=lUAHtyS4yUuqEm_W29W4LNw7b7_1TmBFnKhCajvNhRJUMkhBRlFGSzlCTlFORVVZVjMwN0xQRFNERC4u"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn-primary">
+                Book Demo{' '}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="11"
+                  viewBox="0 0 17 11"
+                  fill="none"
+                  className="inline-block ml-2"
+                >
+                  <path
+                    d="M12 9.39905L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69194L12 1.39905M15 5.39905L1 5.39905"
+                    stroke="#FFFFFF"
+                  />
+                </svg>
+              </button>
+            </a>
           </div>
         </div>
       </div>
