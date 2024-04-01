@@ -44,9 +44,7 @@ function App() {
       <div data-aos="fade-up">
         <BookDemo />
       </div>
-      <div data-aos="fade-up">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

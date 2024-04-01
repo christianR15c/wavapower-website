@@ -1,18 +1,13 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { useRef, useState } from 'react';
-import {
-  Stepper,
-  Step,
-  CardHeader,
-  Typography,
-} from '@material-tailwind/react';
 import toast, { Toaster } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
-import bgImage from '../assets/wirelessLamp.jpg';
-import bgImage1 from '../assets/wirelessLamp1.jpg';
-import bgImage2 from '../assets/wirelessLamp2.jpg';
 import bgImage3 from '../assets/wirelessLamp3.jpg';
+import invest from '../assets/invest1.jpg';
+import partner from '../assets/partner.png';
+import joinTeam from '../assets/jointeam.png';
+import { StepperFun } from './Stepper';
 
 export function TakeAction() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -60,68 +55,23 @@ export function TakeAction() {
       <h2 className="md:text-4xl text-xl text-neutralDGrey font-semibold text-center mb-4">
         Take Action
       </h2>
-      <div className="bg-gray-300 -skew-y-3 rounded-lg">
-        <CardHeader
-          floated={false}
-          variant="gradient"
-          color="gray"
-          className="grid h-24 m-0 place-items-center bg-gray-400 rounded-lg skew-y-3"
-        >
-          <div className="w-full px-20 pt-4 pb-8">
-            <Stepper
-              activeStep={activeStep}
-              lineClassName="bg-white/50"
-              activeLineClassName="bg-white"
-            >
-              <Step
-                className="h-4 w-4 !bg-blue-gray-50 text-white/75 cursor-pointer"
-                activeClassName="ring-0 !bg-white text-white"
-                completedClassName="!bg-white text-white"
-                onClick={() => setActiveStep(1)}
-              >
-                <div className="absolute -bottom-[2.3rem] w-max text-center text-xs">
-                  <Typography variant="h6" color="inherit">
-                    Invest
-                  </Typography>
-                </div>
-              </Step>
-              <Step
-                className="h-4 w-4 !bg-blue-gray-50 text-white/75 cursor-pointer"
-                activeClassName="ring-0 !bg-white text-white"
-                completedClassName="!bg-white text-white"
-                onClick={() => setActiveStep(2)}
-              >
-                <div className="absolute -bottom-[2.3rem] w-max text-center text-xs">
-                  <Typography variant="h6" color="inherit">
-                    Partner
-                  </Typography>
-                </div>
-              </Step>
-              <Step
-                className="h-4 w-4 !bg-blue-gray-50 text-white/75 cursor-pointer"
-                activeClassName="ring-0 !bg-white text-white"
-                completedClassName="!bg-white text-white"
-                onClick={() => setActiveStep(3)}
-              >
-                <div className="absolute -bottom-[2.3rem] w-max text-center text-xs">
-                  <Typography variant="h6" color="inherit">
-                    Join Team
-                  </Typography>
-                </div>
-              </Step>
-            </Stepper>
-          </div>
-        </CardHeader>
-      </div>
+
+      <StepperFun activeStep={activeStep} setActiveStep={setActiveStep} />
 
       <section className="my-12">
         <div
-          style={{ backgroundImage: `url(${bgImage3})` }}
+          style={{ backgroundImage: `url(${invest})` }}
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
         >
           {' '}
-          <h3 className="lg:text-3xl text-xl font-medium leading-none flex justify-center text-white pt-20">
-            Become an Investor{' '}
+          <h3 className="lg:text-3xl text-xl font-bold leading-none flex justify-center text-white pt-20">
+            {`${
+              activeStep === 0
+                ? 'Become an Investor'
+                : activeStep === 1
+                ? 'Become a Partner'
+                : 'Join the Team'
+            }`}
           </h3>
         </div>
         <div className="container mx-auto">
@@ -129,6 +79,16 @@ export function TakeAction() {
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                 <form ref={form} onSubmit={sendEmail}>
+                  <h2 className="text-center pb-4">
+                    {' '}
+                    {`${
+                      activeStep === 0
+                        ? 'Investor'
+                        : activeStep === 1
+                        ? 'Partner'
+                        : 'Join the Team'
+                    }`}
+                  </h2>
                   <div className="relative mb-6" data-te-input-wrapper-init>
                     <input
                       type="text"
@@ -256,7 +216,13 @@ export function TakeAction() {
                       <a href="mailto:info@wavapower.rw" className="ml-6 grow">
                         <p className="mb-2 font-bold dark:text-white">Email</p>
                         <p className="text-neutral-500 dark:text-neutral-200">
-                          info@wavapower.rw
+                          {`${
+                            activeStep === 0
+                              ? 'investor@wavapower.rw'
+                              : activeStep === 1
+                              ? 'partner@wavapower.rw'
+                              : 'team@wavapower.rw'
+                          }`}
                         </p>
                       </a>
                     </div>
