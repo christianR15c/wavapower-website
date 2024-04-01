@@ -4,7 +4,7 @@ import banner2 from '../assets/wavapower2.jpg';
 const Mission = () => {
   return (
     <div className="md:px-14 px-4 pt-4 md:pb-0 pb-6 my-2 mx-auto" id="about">
-      <div className="flex md:h-72 h-32 bg-neutralSilver text-neutralGrey justify-center items-center flex-col rounded-xl shadow-2xl">
+      <div className="flex bg-neutralSilver text-neutralGrey justify-center items-center flex-col rounded-xl shadow-2xl">
         <h2 className="animate-slidein md:text-4xl text-2xl font-semibold mb-4 md:pt-0 pt-2">
           Mission
         </h2>
