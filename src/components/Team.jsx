@@ -27,7 +27,7 @@ const Team = () => {
     {
       id: 2,
       name: 'Shammah LaGrâce',
-      title: 'Co-Founder & Business, Strategy developer',
+      title: 'Co-Founder & Operations',
       image: shammahImage,
       link: 'https://www.linkedin.com/feed/',
     },
@@ -40,30 +40,30 @@ const Team = () => {
     },
     {
       id: 4,
+      name: 'Eric Ndekezi',
+      title: 'Co-founder & Business head',
+      image: ericImage,
+      link: 'https://www.linkedin.com/feed/',
+    },
+    {
+      id: 5,
       name: 'Justin Macharia',
       title: 'Advisor',
       image: justinImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Assouman Nkundabandi',
       title: 'Technical Assistant',
       image: assoumanImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
-      id: 6,
+      id: 7,
       name: 'Dieudonne Nshimiyimana',
       title: 'Accounting & Legal',
       image: dieudonneImage,
-      link: 'https://www.linkedin.com/feed/',
-    },
-    {
-      id: 7,
-      name: 'Eric Ndekezi',
-      title: 'Advertising & Marketing',
-      image: ericImage,
       link: 'https://www.linkedin.com/feed/',
     },
     {
